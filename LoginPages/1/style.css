@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo 2', cursive;
+    color: rgb(49, 49, 49);
+    
+}
+
+    *:focus, *:active{
+        outline: none;
+    }
+
+#circle{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background: red;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+body{
+    background: #f0eeeb;
+    background-image: url(/assets/LoginPageOrangeWave-01.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-x: -1px;
+}
+
+.avatar{
+    height: 100px;
+    width: auto;
+    margin: 0;
+}
+
+.login_panel{
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    background: whitesmoke;
+    text-transform: uppercase;
+    width: 250px;
+    height: 350px;
+    border-radius: 15px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transition: all 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+    .login_panel:hover{
+        box-shadow: 0 30px 25px -5px rgba(0, 0, 0, 0.3), 0 20px 20px -5px rgba(0, 0, 0, 0.14);
+        transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background: transparent;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+form input{
+    display: block;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    background: whitesmoke;
+    padding: 7px 0px;
+}
+
+    form input[type="submit"]{
+        background: linear-gradient(to right, rgba(255,169,22,1) 0%, rgba(252,213,48,1) 100%);
+        color: whitesmoke;
+        font-size: 1rem;
+        border-radius: 5px;
+        transition: all 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    }
+
+    form input[type="submit"]:hover{
+        box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.3), 0 5px 5px -3px rgba(0, 0, 0, 0.24);
+        transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    form input[type="submit"]:active{
+        box-shadow: none;
+    }
+
+    form input::placeholder{
+        opacity: 0;
+    }
+
+/* .spacer{
+    height: 10px;
+    width: 100%;
+    content: "";
+} */
+
+label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1rem;
+    padding: 15px 0;
+    color: darkgray;
+    transition: all 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+input:focus ~ label, input:not(:placeholder-shown) ~ label{
+    top: -20px;
+    font-size: 0.8rem;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+input:focus, input:not(:placeholder-shown){
+    border-bottom: solid 2px orange;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.password_container, .email_container{
+    position: relative;
+}
