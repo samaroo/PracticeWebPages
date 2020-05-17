@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Bubblegum+Sans&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+h3, h1 {
+  font-family: 'Bubblegum Sans', cursive;
+  text-shadow: 1px 1px #2761a3, 2px 2px #22558e, 3px 3px #1d497a, 4px 4px #183c65, 5px 5px #133051, 6px 6px #0e243c, 7px 7px 15px rgba(0, 0, 0, 0.9);
+}
+
+h5, input, li {
+  font-family: 'Baloo 2', cursive;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+}
+
+body #background {
+  -webkit-clip-path: polygon(100% 0, 100% 70%, 53% 100%, 0 100%, 0 0);
+          clip-path: polygon(100% 0, 100% 70%, 53% 100%, 0 100%, 0 0);
+  background: #021e42;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+body header {
+  padding: 25px;
+  color: whitesmoke;
+}
+
+body header h3 {
+  padding: 0;
+  margin: 0;
+}
+
+body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: whitesmoke;
+  margin-top: 3vh;
+}
+
+body main .card {
+  padding: 10px;
+  border-radius: 15px;
+  background: #021e42;
+  -webkit-box-shadow: 16px 16px 32px #01142c, -16px -16px 32px #032858, inset 5px 5px 15px rgba(59, 122, 204, 0.25), inset -5px -5px 15px #010f20;
+          box-shadow: 16px 16px 32px #01142c, -16px -16px 32px #032858, inset 5px 5px 15px rgba(59, 122, 204, 0.25), inset -5px -5px 15px #010f20;
+  margin-bottom: 3vh;
+  border: none;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .card li {
+  position: relative;
+  left: -15px;
+}
+
+body main h1, body main h5 {
+  text-align: center;
+}
+
+body main input {
+  margin-top: 50px;
+  border: none;
+  background: #021e42;
+  padding: 15px;
+  -webkit-box-shadow: 8px 8px 16px #01142c, -8px -8px 16px #032858, inset 2px 2px 5px rgba(12, 59, 121, 0.3), inset -2px -2px 5px #010f20;
+          box-shadow: 8px 8px 16px #01142c, -8px -8px 16px #032858, inset 2px 2px 5px rgba(12, 59, 121, 0.3), inset -2px -2px 5px #010f20;
+  color: whitesmoke;
+  border-radius: 10px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+input:hover {
+  font-weight: bold;
+  background: #03295b;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+/*# sourceMappingURL=main.css.map */

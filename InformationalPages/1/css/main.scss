@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Bubblegum+Sans&display=swap');
+
+$colors: (
+    primary: rgb(2, 30, 66),
+    card: rgb(2, 30, 66),
+    text: whitesmoke
+);
+
+@function fetchColor($key){
+    @return map-get($map: $colors, $key: $key)
+}
+
+*{
+    box-sizing: border-box;
+
+    &:focus{
+        outline: none;
+    }
+}
+
+
+h3, h1 {
+    font-family: 'Bubblegum Sans', cursive;
+    $shadow :  #2761a3;
+    text-shadow: 1px 1px $shadow,
+                    2px 2px darken($color: $shadow, $amount: 5%),
+                    3px 3px darken($color: $shadow, $amount: 10%),
+                    4px 4px darken($color: $shadow, $amount: 15%),
+                    5px 5px darken($color: $shadow, $amount: 20%),
+                    6px 6px darken($color: $shadow, $amount: 25%),
+                    7px 7px 15px rgba(0,0,0,0.9);
+}
+
+h5, input, li {
+    font-family: 'Baloo 2', cursive;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+
+    #background{
+        clip-path: polygon(100% 0, 100% 70%, 53% 100%, 0 100%, 0 0);
+        background: fetchColor(primary);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    header{
+        padding: 25px;
+        color: fetchColor(text);
+
+        h3{
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: fetchColor(text);
+        margin-top: 3vh;
+
+        .card{
+            padding: 10px;
+            border-radius: 15px;
+            background: fetchColor(card);
+            box-shadow:     16px 16px 32px #01142c, 
+                            -16px -16px 32px #032858,
+                            inset 5px 5px 15px rgba(59, 122, 204, 0.25),
+                            inset -5px -5px 15px rgb(1, 15, 32);
+            margin-bottom: 3vh;
+            border: none;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;;
+            align-items: center;;
+
+            li{
+                position: relative;
+                left: -15px;
+            }
+        }
+
+        h1, h5{
+            text-align: center;
+        }
+
+        input{
+            margin-top: 50px;
+            border: none;
+            background: fetchColor(card);
+            padding: 15px;
+            box-shadow:     8px 8px 16px #01142c, 
+                            -8px -8px 16px #032858,
+                            inset 2px 2px 5px rgba(12, 59, 121, 0.3),
+                            inset -2px -2px 5px rgb(1, 15, 32);
+            color: fetchColor(text);
+            border-radius: 10px;
+            transition: all 1s ease;
+        }
+    }
+}
+
+input:hover{
+    font-weight: bold;
+    background: lighten(fetchColor(card), 5%);
+    box-shadow: none;
+    transition: all 1s ease;
+}
