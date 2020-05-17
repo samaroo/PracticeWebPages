@@ -12,6 +12,7 @@ $colors: (
 
 *{
     box-sizing: border-box;
+    user-select: none;
 
     &:focus{
         outline: none;
@@ -71,9 +72,9 @@ body{
             padding: 10px;
             border-radius: 15px;
             background: fetchColor(card);
-            box-shadow:     16px 16px 32px #01142c, 
-                            -16px -16px 32px #032858,
-                            inset 5px 5px 15px rgba(59, 122, 204, 0.25),
+            box-shadow:     10px 10px 22px #01142c, 
+                            -10px -10px 22px #032858,
+                            inset 5px 5px 15px rgba(36, 83, 144, 0.2),
                             inset -5px -5px 15px rgb(1, 15, 32);
             margin-bottom: 3vh;
             border: none;
@@ -104,14 +105,13 @@ body{
                             inset -2px -2px 5px rgb(1, 15, 32);
             color: fetchColor(text);
             border-radius: 10px;
-            transition: all 1s ease;
+            transition: all 0.6s ease;
         }
     }
 }
 
 input:hover{
-    font-weight: bold;
-    background: lighten(fetchColor(card), 5%);
+    font-weight: 1000;
     box-shadow: none;
-    transition: all 1s ease;
+    transition: all 0.6s ease;
 }
