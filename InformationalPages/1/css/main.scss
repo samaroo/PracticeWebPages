@@ -8,12 +8,12 @@ $colors: (
 
 @function fetchColor($key){
     @return map-get($map: $colors, $key: $key)
-}
+};
 
 // Override Sass min()
 @function min($numbers...) {
   @return m#{i}n(#{$numbers});
-}
+};
 
 *{
     box-sizing: border-box;
