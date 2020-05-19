@@ -1,0 +1,254 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #ececec;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.cardContainer {
+  border-radius: 20px;
+}
+
+.cardContainer:hover .card {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateY(0.5turn);
+          transform: rotateY(0.5turn);
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  position: relative;
+  width: 400px;
+  height: 200px;
+  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  border: solid 1px gray;
+}
+
+.front {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 400px;
+  height: 200px;
+}
+
+.front::before {
+  position: absolute;
+  height: 250px;
+  width: 500px;
+  top: -20px;
+  -webkit-clip-path: polygon(33% 0, 0 52%, 80% 100%);
+          clip-path: polygon(33% 0, 0 52%, 80% 100%);
+  content: "";
+  background: -webkit-gradient(linear, left top, right top, from(#cf16ff), color-stop(44%, #ff4426), color-stop(78%, #fff318));
+  background: linear-gradient(90deg, #cf16ff 0%, #ff4426 44%, #fff318 78%);
+  opacity: 80%;
+  z-index: -1;
+  -webkit-transform: translateZ(3rem);
+          transform: translateZ(3rem);
+}
+
+.front::after {
+  position: absolute;
+  height: 250px;
+  width: 500px;
+  top: -20px;
+  -webkit-clip-path: polygon(79% 0, 100% 50%, 61% 77%, 28% 35%);
+          clip-path: polygon(79% 0, 100% 50%, 61% 77%, 28% 35%);
+  content: "";
+  background: -webkit-gradient(linear, left top, right top, from(#7eff16), to(#3092fc));
+  background: linear-gradient(90deg, #7eff16 0%, #3092fc 100%);
+  opacity: 80%;
+  z-index: -1;
+  -webkit-transform: translateZ(7rem);
+          transform: translateZ(7rem);
+}
+
+.front #name {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5rem;
+  -webkit-transform: translateZ(11rem);
+          transform: translateZ(11rem);
+  color: whitesmoke;
+  font-weight: 600;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.back {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate(-50%, -50%) rotateY(-0.5turn);
+          transform: translate(-50%, -50%) rotateY(-0.5turn);
+}
+
+.back::before {
+  position: absolute;
+  width: 375px;
+  height: 175px;
+  content: "";
+  border-radius: 20px;
+  border: solid 0.5px darkgrey;
+  background: rgba(211, 211, 211, 0.2);
+  z-index: -1;
+  -webkit-transform: translateZ(3rem);
+          transform: translateZ(3rem);
+}
+
+.back::after {
+  position: absolute;
+  width: 345px;
+  height: 145px;
+  content: "";
+  border-radius: 20px;
+  border: solid 0.5px darkgrey;
+  background: rgba(211, 211, 211, 0.4);
+  z-index: -1;
+  -webkit-transform: translateZ(5rem);
+          transform: translateZ(5rem);
+}
+
+.back a {
+  width: 45px;
+  height: 45px;
+  margin: 10px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ddd), to(#fff));
+  background: linear-gradient(0deg, #ddd, #fff);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  border-radius: 50%;
+  -webkit-box-shadow: 3px 7px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 7px 15px rgba(0, 0, 0, 0.3);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.back a:visited {
+  color: black;
+}
+
+.back i {
+  font-size: 1rem;
+  width: 80%;
+  height: 80%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#fff), to(#ddd));
+  background: linear-gradient(0deg, #fff, #ddd);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+a {
+  -webkit-transform: translateZ(8rem);
+          transform: translateZ(8rem);
+}
+
+.fb:hover {
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(48, 87, 212, 0.6);
+          box-shadow: 0px 0px 10px 5px rgba(48, 87, 212, 0.6);
+}
+
+.fb:hover i {
+  color: #3056d4;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.tw:hover {
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(14, 172, 235, 0.6);
+          box-shadow: 0px 0px 10px 5px rgba(14, 172, 235, 0.6);
+}
+
+.tw:hover i {
+  color: #0eaceb;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.gh:hover {
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(76, 209, 52, 0.6);
+          box-shadow: 0px 0px 10px 5px rgba(76, 209, 52, 0.6);
+}
+
+.gh:hover i {
+  color: #4cd134;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.li:hover {
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(60, 149, 190, 0.6);
+          box-shadow: 0px 0px 10px 5px rgba(60, 149, 190, 0.6);
+}
+
+.li:hover i {
+  color: #3c95be;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.ig:hover {
+  -webkit-box-shadow: 0px 0px 3px 2px rgba(255, 230, 3, 0.692), 0px 0px 10px 5px rgba(144, 48, 255, 0.52);
+          box-shadow: 0px 0px 3px 2px rgba(255, 230, 3, 0.692), 0px 0px 10px 5px rgba(144, 48, 255, 0.52);
+}
+
+.ig:hover i {
+  color: #ff03ab;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+/*# sourceMappingURL=style.css.map */
