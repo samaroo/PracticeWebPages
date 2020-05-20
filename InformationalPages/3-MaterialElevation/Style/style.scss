@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+
+    main{
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+}
+
+.base{
+    background: black;
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    //padding: 50px 0px;
+    transform: rotateX(50deg) rotateZ(-25deg);
+
+    a{
+        color: whitesmoke;
+        width: 160px;
+        height: 160px;
+        display: grid;
+        place-items: center;
+        text-decoration: none;
+
+        i{
+            font-size: 3rem;
+        }
+    }
+}
