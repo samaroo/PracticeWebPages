@@ -1,0 +1,7 @@
+@mixin elevate($factor) {
+    $shift: $factor * 1px;
+	
+	transform: translateY(-$shift) translateX($shift);
+	box-shadow:  -$shift * 1.5 $shift * 1.7  $shift / 2 rgba(black, 0.1),
+			-$shift * 1.5 $shift * 1.7 $shift / 2 rgba(black, 0.1);
+}
